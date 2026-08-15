@@ -25,7 +25,9 @@ rationale and folder-by-folder responsibilities: `~/.claude/plans/jolly-dazzling
 
 ## Skills
 
-- `prospect-audit` (`.claude/skills/prospect-audit/SKILL.md`) — given a business's
-  URL, does passive technical + digital-presence recon and produces a pitch-ready
-  brief (what tech they already have vs. gaps/opportunities) to prep for an
-  in-person or cold outreach sales conversation. Not yet tested against a real URL.
+- `prospect-audit` (global skill: `~/.claude/skills/prospect-audit/SKILL.md`) —
+  given a business's URL, does passive technical + digital-presence recon and
+  produces a pitch-ready brief (what tech they already have vs.
+  gaps/opportunities) to prep for an in-person or cold outreach sales
+  conversation. Lives outside this project so it's usable from any directory.
+  Not yet tested against a real URL.
