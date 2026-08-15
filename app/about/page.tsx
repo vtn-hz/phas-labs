@@ -10,7 +10,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <Section className="pt-24 sm:pt-32">
-      <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-accent text-lg font-semibold text-accent-foreground">
+        VH
+      </div>
+      <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
         Sobre {siteConfig.name}
       </h1>
       <div className="mt-8 max-w-2xl space-y-4 text-muted-foreground">
@@ -21,6 +24,12 @@ export default function AboutPage() {
           empresas grandes, no porque no la necesiten, sino porque nadie se
           las ofrece de forma clara y a su medida.
         </p>
+        <blockquote className="border-l-2 border-accent pl-4 text-lg italic">
+          &ldquo;Arranqué esto porque veía negocios buenísimos perdiendo
+          clientes por cosas evitables: un mensaje sin contestar, una web que
+          no existe. Quiero que dejes de perder ventas por no llegar a
+          tiempo.&rdquo;
+        </blockquote>
         <p>
           Antes de proponer una solución, nos tomamos el tiempo de entender a
           qué se dedica tu negocio y qué es lo que realmente te haría falta:

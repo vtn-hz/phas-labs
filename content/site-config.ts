@@ -2,7 +2,7 @@ import type { SiteConfig } from "./types";
 
 export const siteConfig: SiteConfig = {
   name: "Phas Labs",
-  tagline: "Tecnología a medida para negocios que quieren crecer",
+  tagline: "Mientras vos atendés el local, tu WhatsApp también atiende",
   description:
     "Creamos páginas web con IA, automatizamos la atención por WhatsApp y desarrollamos soluciones a medida para pequeños negocios y pymes.",
   // TODO: reemplazar por el número real de WhatsApp Business, formato internacional

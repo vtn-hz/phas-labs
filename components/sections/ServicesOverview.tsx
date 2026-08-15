@@ -3,13 +3,14 @@ import { getServices } from "@/lib/services";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { ServiceIcon } from "@/components/services/ServiceIcon";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function ServicesOverview() {
   const services = getServices();
 
   return (
     <Section id="servicios" className="border-t border-border">
-      <div className="flex items-end justify-between gap-4">
+      <Reveal className="flex items-end justify-between gap-4">
         <h2 className="text-3xl font-semibold tracking-tight">
           Qué podemos hacer por tu negocio
         </h2>
@@ -19,18 +20,20 @@ export function ServicesOverview() {
         >
           Ver todos los servicios →
         </Link>
-      </div>
+      </Reveal>
       <div className="mt-10 grid gap-6 sm:grid-cols-3">
-        {services.map((service) => (
-          <Link key={service.slug} href={`/services/${service.slug}`}>
-            <Card className="h-full transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-lg">
-              <ServiceIcon slug={service.slug} />
-              <h3 className="mt-4 font-medium">{service.name}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {service.shortDescription}
-              </p>
-            </Card>
-          </Link>
+        {services.map((service, index) => (
+          <Reveal key={service.slug} delay={index * 100}>
+            <Link href={`/services/${service.slug}`}>
+              <Card className="h-full transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-lg">
+                <ServiceIcon slug={service.slug} />
+                <h3 className="mt-4 font-medium">{service.name}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {service.shortDescription}
+                </p>
+              </Card>
+            </Link>
+          </Reveal>
         ))}
       </div>
     </Section>

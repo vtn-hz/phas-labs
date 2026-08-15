@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { ServiceIcon } from "@/components/services/ServiceIcon";
-import { cn } from "@/lib/utils";
+import { AnimatedChatDemo } from "@/components/services/AnimatedChatDemo";
 
 const SLUG = "whatsapp-automation";
 
@@ -17,27 +17,6 @@ export function generateMetadata(): Metadata {
     title: service?.name,
     description: service?.shortDescription,
   };
-}
-
-function ChatBubble({
-  from,
-  text,
-}: {
-  from: "cliente" | "bot";
-  text: string;
-}) {
-  return (
-    <div
-      className={cn(
-        "max-w-[80%] rounded-2xl px-4 py-2 text-sm",
-        from === "cliente"
-          ? "self-start bg-muted text-foreground"
-          : "self-end bg-accent text-accent-foreground",
-      )}
-    >
-      {text}
-    </div>
-  );
 }
 
 const transcript: { from: "cliente" | "bot"; text: string }[] = [
@@ -68,11 +47,7 @@ export default function WhatsappAutomationPage() {
       </p>
 
       <Card className="mt-12 max-w-sm">
-        <div className="flex flex-col gap-3">
-          {transcript.map((message, index) => (
-            <ChatBubble key={index} {...message} />
-          ))}
-        </div>
+        <AnimatedChatDemo transcript={transcript} />
         <p className="mt-4 text-center text-xs text-muted-foreground">
           Ejemplo de conversación automatizada
         </p>
