@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getCaseStudies } from "@/lib/case-studies";
 import { Section } from "@/components/ui/Section";
 import { CaseStudyCard } from "@/components/case-studies/CaseStudyCard";
@@ -8,8 +9,18 @@ export function CaseStudiesPreview() {
   const caseStudies = getCaseStudies();
 
   return (
-    <Section className="border-t border-border">
-      <h2 className="text-3xl font-semibold tracking-tight">Casos</h2>
+    <Section id="casos" className="border-t border-border">
+      <div className="flex items-end justify-between gap-4">
+        <h2 className="text-3xl font-semibold tracking-tight">Casos</h2>
+        {caseStudies.length > 0 && (
+          <Link
+            href="/work"
+            className="hidden shrink-0 text-sm text-muted-foreground transition-colors hover:text-foreground sm:block"
+          >
+            Ver todos los casos →
+          </Link>
+        )}
+      </div>
       {caseStudies.length === 0 ? (
         <div className="mt-8 rounded-2xl border border-dashed border-border p-10 text-center">
           <p className="text-muted-foreground">

@@ -8,10 +8,18 @@ export function ServicesOverview() {
   const services = getServices();
 
   return (
-    <Section className="border-t border-border">
-      <h2 className="text-3xl font-semibold tracking-tight">
-        Qué podemos hacer por tu negocio
-      </h2>
+    <Section id="servicios" className="border-t border-border">
+      <div className="flex items-end justify-between gap-4">
+        <h2 className="text-3xl font-semibold tracking-tight">
+          Qué podemos hacer por tu negocio
+        </h2>
+        <Link
+          href="/services"
+          className="hidden shrink-0 text-sm text-muted-foreground transition-colors hover:text-foreground sm:block"
+        >
+          Ver todos los servicios →
+        </Link>
+      </div>
       <div className="mt-10 grid gap-6 sm:grid-cols-3">
         {services.map((service) => (
           <Link key={service.slug} href={`/services/${service.slug}`}>

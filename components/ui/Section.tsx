@@ -2,16 +2,21 @@ import { cn } from "@/lib/utils";
 import { Container } from "./Container";
 
 export function Section({
+  id,
   className,
   containerClassName,
   children,
 }: {
+  id?: string;
   className?: string;
   containerClassName?: string;
   children: React.ReactNode;
 }) {
   return (
-    <section className={cn("py-16 sm:py-24", className)}>
+    <section
+      id={id}
+      className={cn("scroll-mt-20 py-16 sm:py-24", className)}
+    >
       <Container className={containerClassName}>{children}</Container>
     </section>
   );
