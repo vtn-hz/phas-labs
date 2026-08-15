@@ -32,7 +32,7 @@ export function CaseStudiesPreview() {
           <div className="mt-6 flex justify-center">
             <Button
               href={buildWhatsAppLink(
-                "Hola! Quiero ser uno de los primeros casos de Phascual Labs.",
+                "Hola! Quiero ser uno de los primeros casos de Phas Labs.",
               )}
               target="_blank"
               rel="noopener noreferrer"
