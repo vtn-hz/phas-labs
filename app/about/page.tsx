@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <Section className="pt-24 sm:pt-32">
-      <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+      <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
         Sobre {siteConfig.name}
       </h1>
       <div className="mt-8 max-w-2xl space-y-4 text-muted-foreground">

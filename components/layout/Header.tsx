@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 
 export function Header() {
   return (
-    <header className="border-b border-border">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-sm">
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="font-semibold tracking-tight">
           {siteConfig.name}

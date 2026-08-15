@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getServiceBySlug } from "@/lib/services";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
+import { ServiceIcon } from "@/components/services/ServiceIcon";
 
 const SLUG = "ai-websites";
 
@@ -57,7 +59,8 @@ export default function AiWebsitesPage() {
 
   return (
     <Section className="pt-24 sm:pt-32">
-      <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+      <ServiceIcon slug={SLUG} className="h-14 w-14 rounded-2xl" />
+      <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
         {service.name}
       </h1>
       <p className="mt-4 max-w-xl text-muted-foreground">
@@ -72,7 +75,7 @@ export default function AiWebsitesPage() {
       <ul className="mt-12 grid gap-3 sm:grid-cols-2">
         {service.bullets.map((bullet) => (
           <li key={bullet} className="flex items-start gap-2 text-sm">
-            <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={2.5} />
             <span className="text-muted-foreground">{bullet}</span>
           </li>
         ))}
