@@ -13,7 +13,7 @@ export function Hero() {
       <Section className="pt-28 sm:pt-40">
         <div className="max-w-2xl">
           <span className="animate-fade-in-up inline-flex items-center rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
-            Tecnología para pymes y negocios chicos
+            Tecnología para empresas en crecimiento
           </span>
           <h1
             className="animate-fade-in-up mt-6 text-5xl font-semibold tracking-tight text-balance sm:text-7xl"

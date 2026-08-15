@@ -19,10 +19,10 @@ export default function AboutPage() {
       <div className="mt-8 max-w-2xl space-y-4 text-muted-foreground">
         <p>
           {siteConfig.name} es un estudio chico armado por Valentino Hernández
-          Pascual, enfocado en una idea simple: los negocios chicos y las
-          pymes no siempre tienen acceso a la misma tecnología que las
-          empresas grandes, no porque no la necesiten, sino porque nadie se
-          las ofrece de forma clara y a su medida.
+          Pascual, enfocado en una idea simple: las empresas en crecimiento no
+          siempre tienen acceso a la misma tecnología que las empresas
+          grandes, no porque no la necesiten, sino porque nadie se las ofrece
+          de forma clara y a su medida.
         </p>
         <blockquote className="border-l-2 border-accent pl-4 text-lg italic">
           &ldquo;Arranqué esto porque veía negocios buenísimos perdiendo

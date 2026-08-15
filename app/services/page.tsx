@@ -8,7 +8,7 @@ import { ServiceIcon } from "@/components/services/ServiceIcon";
 export const metadata: Metadata = {
   title: "Servicios",
   description:
-    "Páginas web con IA, automatización por WhatsApp y desarrollo a medida para pequeños negocios.",
+    "Páginas web con IA, automatización por WhatsApp y desarrollo a medida para empresas en crecimiento.",
 };
 
 export default function ServicesPage() {
