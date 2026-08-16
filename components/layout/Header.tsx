@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navLinks } from "@/content/nav";
 import { siteConfig } from "@/content/site-config";
@@ -7,7 +8,17 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-sm">
       <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="font-semibold tracking-tight">
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-semibold tracking-tight"
+        >
+          <Image
+            src="/grayco-icon.png"
+            alt=""
+            width={32}
+            height={32}
+            className="h-8 w-8 rounded-lg"
+          />
           {siteConfig.name}
         </Link>
         <nav className="flex items-center gap-6 text-sm">
